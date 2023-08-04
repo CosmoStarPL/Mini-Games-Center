@@ -28,9 +28,9 @@ const result = document.getElementById('result')
 const answerYes = document.getElementById('answer-yes')
 const answerNo = document.getElementById('answer-no')
 
-const getRandomNumber = (except = 0) => {
+const getRandomNumber = (max = 100, except = 0) => {
   while (true) {
-    const random = Math.floor(Math.random() * 100) + 1
+    const random = Math.floor(Math.random() * max) + 1
     if (random !== except) {
       return random
     }
@@ -57,7 +57,7 @@ operator.innerText = chooseRandomElement(['+', '-', '*', '/'])
 
 const expression = firstOperand.innerText + operator.innerText + secondOperand.innerText
 const answer = eval(expression)
-const option = chooseRandomElement([getRandomNumber(answer), answer])
+const option = chooseRandomElement([getRandomNumber(1e4, answer), answer])
 result.innerText = option
 
 const win = () => {
