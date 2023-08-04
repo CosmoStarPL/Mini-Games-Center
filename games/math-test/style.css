@@ -1,0 +1,21 @@
+* {
+ font-family: monospace;
+}
+body {
+ background: #111;
+ color: #eee;
+ text-align: center;
+ zoom: 3;
+}
+#expression * {
+ font-size: 1.5em;
+}
+button {
+ margin-top: 10px;
+ padding: 3px 8px;
+ background: #07b;
+ color: #fff;
+ border: 3px solid #059;
+ border-radius: 10px;
+ cursor: pointer;
+}

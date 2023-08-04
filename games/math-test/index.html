@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Math Test</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <div id="records">
+    <span>Current:</span>
+    <span id="current"></span>
+    <span>|</span>
+    <span>Record:</span>
+    <span id="record"></span>
+  </div>
+  <h3 id="heading">Is this the correct expression?</h3>
+  <div id="expression">
+    <span id="operand-first"></span>
+    <span id="operator"></span>
+    <span id="operand-second"></span>
+    <span>=</span>
+    <span id="result"></span>
+  </div>
+  <button type="button" id="answer-yes">Yes</button>
+  <button type="button" id="answer-no">No</button>
+  <script src="app.js"></script>
 </body>
 </html>
