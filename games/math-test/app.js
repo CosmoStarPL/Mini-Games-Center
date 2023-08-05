@@ -9,8 +9,8 @@ const createItem = (key, value = '0') => {
 
 const updateItem = (key, mode = true) => {
   if (mode) {
-    const value = localStorage.getItem(key)
-    localStorage.setItem(key, (parseInt(value) + 1).toString())
+    const value = parseInt(localStorage.getItem(key))
+    localStorage.setItem(key, (value + 1).toString())
   } else {
     localStorage.setItem(key, '0')
   }
@@ -29,12 +29,11 @@ const answerYes = document.getElementById('answer-yes')
 const answerNo = document.getElementById('answer-no')
 
 const getRandomNumber = (max = 100, except = 0) => {
-  while (true) {
-    const random = Math.floor(Math.random() * max) + 1
-    if (random !== except) {
-      return random
-    }
-  }
+  let random;
+  do {
+    random = Math.floor(Math.random() * max) + 1;
+  } while (random === except);
+  return random;
 }
 
 const chooseRandomElement = (array) => {
@@ -62,7 +61,7 @@ result.innerText = option
 
 const win = () => {
   updateItem(currentKey)
-  if (localStorage.getItem(currentKey) > localStorage.getItem(recordKey)) {
+  if (parseInt(localStorage.getItem(currentKey)) > parseInt(localStorage.getItem(recordKey))) {
     updateItem(recordKey)
   }
   location.reload()
