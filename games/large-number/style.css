@@ -1,0 +1,36 @@
+*{
+   margin: 0;
+   padding: 0;
+   background-color: rgb(119, 119, 119);
+   color: white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+    width: 100%;
+}
+
+.points_counter{
+    font-size: 43px;
+    text-align: center;
+}
+
+
+.block-1, .block-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+#num-1, #num-2 {
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    width: 100%;
+}
